@@ -1,0 +1,36 @@
+global int var = 1;
+
+main_program
+    begin
+        print(2);
+        int var2 = 3 ;
+        int const var3 = call sub(var2);
+        element el = "elem";
+        set s = {el, el};
+        s.remove(el);
+        set s2 = s * s;
+        print(s);
+        for (element e : s2)
+            begin
+                print(e);
+            end
+        while (var2 < 8)
+            begin
+            var2 = var2 + 2;
+            print("Added");
+            end
+        if (var2 == 8)
+            begin
+                print("This is the right condition");
+            end
+        then
+            begin
+                print("This is a wrong condition");
+            end
+    end
+
+sub_program int sub(int var3)
+    begin
+        print(var3);
+        return var3;
+    end
